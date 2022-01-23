@@ -18,15 +18,9 @@ body {
 }
 
 :root {
-  --color-back-footer: #252525;
-  --color-text: #333333;
   --color-for-dark: #FFFFFF;
-  --color-gray: #777777;
-  --color-priority: #4CAF50;
-  --color-border-green: #70BF73;
-  --color-gray-text: #C2C2C2;
+  --color-priority: #8DD83D;
   --color-background: #373A3C;
-  --color-of-gray: #373737;
 }
 
 *,
@@ -64,7 +58,7 @@ button:hover {
   max-width: 1110px;
 }
 
-.title {
+/* .title {
   position: relative;
   font-style: normal;
   font-weight: bold;
@@ -72,23 +66,24 @@ button:hover {
   line-height: 53px;
   letter-spacing: 2.304px;
   color: var(--color-text);
-}
-
-/* .title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 45px;
-  height: 2px;
-  background-color: var(--color-back-footer);
 } */
+
+.btn {
+  padding: 9px 19px;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-for-dark);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: color .4s ease-in-out, border-color .4s ease-in-out, background-color .4s ease-in-out;
+}
 
 .btn__scroll {
   display: none;
   padding: 10px;
-  background-color: var(--color-gray);
+  font-size: 20px;
   color: var(--color-for-dark);
+  background-color: var(--color-priority);
   border-radius: 50px;
   text-decoration: none;
   z-index: 1000;
@@ -170,14 +165,32 @@ button:hover {
   background-position: right top 4px;
 }
 
-
-
-
 .swiper {
-  height: 387px;
+  width: 100%;
+  height: 648px;
 }
+
 .swiper-wrapper {
   height: auto;
+}
+
+.swiper-slide {
+  height: 648px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slide1 {
+  background-image: url('../images/Star-Wars-Battlefront-II-combat.png');
+}
+
+.slide2 {
+  background-image: url('../images/design_back.png');
+}
+
+.slide3 {
+  background-image: url('../images/best/xbox-one-x.png');
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -189,15 +202,20 @@ button:hover {
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  background-image: url('../images/icons/arrow_left.svg');
+  background-image: url('../images/icons/icon-prev.svg');
   background-position: center bottom 50%;
   background-repeat: no-repeat;
   background-size: 20px;
   transition: background-color .4s ease-in-out;
 }
 
+.swiper-button-prev {
+  left: 15%;
+}
+
 .swiper-button-next {
-  background-image: url('../images/icons/arrow_right.svg');
+  right: 15%;
+  background-image: url('../images/icons/icon-next.svg');
 }
 
 .swiper-button-prev:hover,
@@ -205,7 +223,68 @@ button:hover {
   background-color: var(--color-gray-text);
 }
 
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.0001);
+  border: 1px solid var(--color-priority);
+}
 
+.swiper-pagination-bullets .swiper-pagination-bullet-active  {
+ background-color: var(--color-priority); 
+}
+
+.swiper-slide__wrap {
+  width: 37%;
+  text-align: left;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+.hero__container {
+  display: flex;
+  justify-content: end;
+  padding-top: 206px;
+  height: 100%;
+  /* text-align: right; */
+}
+
+.hero__title {
+  margin-bottom: 2px;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--color-for-dark);
+}
+
+.hero__subtitle {
+  display: block;
+  margin-bottom: 134px;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-for-dark);
+}
+
+.hero__btn-green {
+  margin-right: 13px;
+  background-color:  var(--color-priority);
+}
+
+.hero__btn-green:hover {
+  background-color: transparent;
+  border-color: var(--color-priority);
+  color: var(--color-priority);
+}
+
+.hero__btn-gray {
+  background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+}
+
+.hero__btn-gray:hover {
+  background: transparent;
+  border-color: var(--color-background);
+}
 
 
 /* -------------media---------------- */
