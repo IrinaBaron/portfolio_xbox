@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'helveticaneue';
-  src: url('helveticaneue-regular-webfont.woff2') format('woff2'),
-       url('helveticaneue-regular-webfont.woff') format('woff');
+  src: url('../fonts/helveticaneue-regular-webfont.woff2') format('woff2'),
+       url('../fonts/helveticaneue-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -25,7 +25,7 @@ body {
   --color-priority: #4CAF50;
   --color-border-green: #70BF73;
   --color-gray-text: #C2C2C2;
-  --color-background: #FBFBFB;
+  --color-background: #373A3C;
   --color-of-gray: #373737;
 }
 
@@ -59,9 +59,9 @@ button:hover {
 }
 
 .container {
-  padding: 68px 15px;
+  padding: 64px 15px;
   margin: 0 auto;
-  max-width: 1220px;
+  max-width: 1110px;
 }
 
 .title {
@@ -94,13 +94,81 @@ button:hover {
   z-index: 1000;
 }
 
-.hero__burger {
+.header__burger {
   display: none;
   opacity: 0;
   transition: display .4s ease-in-out, opacity .4s ease-in-out;
 }
 
 /* header  */
+
+.header {
+  background-color: var(--color-background);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.header__link {
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color .4s ease-in-out;
+}
+
+.header__link:hover {
+  color: var(--color-for-dark);
+}
+
+.header__item.active .header__link {
+  color: var(--color-for-dark);
+}
+
+.drop {
+  padding-right: 20px;
+  background-image: url('../images/icons/down-arrow.svg');
+  background-position: right top 7px;
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+}
+
+.header__search {
+  padding: 9px 50px 8px 16px;
+  max-width: 209px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  background-color: var(--color-for-dark);
+}
+
+.header__search::placeholder {
+  font-size: 16px;
+  line-height: 21px;
+  color: #435766;
+  opacity: 0.4;
+}
+
+.header__item:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.account {
+  padding-left: 5px;
+  background-position: right top 4px;
+}
 
 
 
