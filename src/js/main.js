@@ -19,6 +19,33 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   });
 
+  const swiper1 = new Swiper('.swiper2', {
+    // Optional parameters
+    // direction: 'horizontal',
+    // loop: false,
+    // swiper-slide-active: 2,
+    effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          scale: 1,
+          // stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+
+  });
+
 
 
   // let elems = document.querySelectorAll('.team__item');
