@@ -21,6 +21,7 @@ body {
   --color-for-dark: #FFFFFF;
   --color-priority: #8DD83D;
   --color-background: #373A3C;
+  --color-text: #435766;
 }
 
 *,
@@ -48,6 +49,11 @@ p {
   margin: 0;
 }
 
+button {
+  background: none;
+  border: 1px solid transparent;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -69,6 +75,7 @@ button:hover {
 } */
 
 .btn {
+  display: inline-block;
   padding: 9px 19px;
   font-size: 16px;
   line-height: 21px;
@@ -178,7 +185,7 @@ button:hover {
   height: 648px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .slide1 {
@@ -186,11 +193,13 @@ button:hover {
 }
 
 .slide2 {
-  background-image: url('../images/design_back.png');
+  background-image: url('../images/hero2.jpg');
+  /* background-size: cover; */
 }
 
 .slide3 {
-  background-image: url('../images/best/xbox-one-x.png');
+  background-image: url('../images/hero3.jpg');
+  /* background-size: cover; */
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -237,18 +246,13 @@ button:hover {
 .swiper-slide__wrap {
   width: 37%;
   text-align: left;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
 }
 
 .hero__container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-top: 206px;
   height: 100%;
-  /* text-align: right; */
 }
 
 .hero__title {
@@ -284,6 +288,108 @@ button:hover {
 .hero__btn-gray:hover {
   background: transparent;
   border-color: var(--color-background);
+}
+
+/* best  */
+
+.best {
+  background: radial-gradient(100% 100% at 50% 0%, #686C6F 0%, #373A3C 100%);
+}
+
+.best__container {
+  padding-top: 64px;
+  padding-bottom: 162px;
+  text-align: center;
+}
+
+.best__logo {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.best__title {
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--color-for-dark);
+}
+
+.best__text {
+  display: inline-block;
+  margin-bottom: 42px;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--color-for-dark);
+}
+
+.best__list {
+  display: flex;
+}
+
+.best__item {
+  position: relative;
+  flex-grow: 1;
+  width: 320px;
+  border: 1px solid var(--color-priority);
+  border-radius: 4px;
+  /* border-top: 2px solid var(--color-priority); */
+  background-color: var(--color-for-dark);
+}
+
+.best__item:not(:last-child) {
+  margin-right: 64px;
+}
+
+.best__box {
+  padding-right: 21px;
+  padding-bottom: 125px;
+  padding-left: 21px;
+  text-align: left;
+}
+
+.best__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  height: 180px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #FAFAFA;
+}
+
+.best__img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.best__subtitle {
+  margin-bottom: 13px;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--color-text);
+}
+
+.best__desc {
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-text);
+}
+
+.one {
+  margin-left: 1px;
+}
+
+.best__btn {
+  position: absolute;
+  right: 21px;
+  bottom: 27px;
+  left: 21px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 
