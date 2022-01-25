@@ -185,7 +185,7 @@ button:hover {
   height: 648px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .slide1 {
@@ -194,12 +194,10 @@ button:hover {
 
 .slide2 {
   background-image: url('../images/hero2.jpg');
-  /* background-size: cover; */
 }
 
 .slide3 {
   background-image: url('../images/hero3.jpg');
-  /* background-size: cover; */
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -331,7 +329,6 @@ button:hover {
   width: 320px;
   border: 1px solid var(--color-priority);
   border-radius: 4px;
-  /* border-top: 2px solid var(--color-priority); */
   background-color: var(--color-for-dark);
 }
 
@@ -392,12 +389,17 @@ button:hover {
   text-align: center;
 }
 
+.best__btn:hover {
+  color: var(--color-text);
+}
+
 /* exclusive  */
 .exclusive {
   background-image: url('../images/exclusive/exclusive_back.png');
+  /* , radial-gradient(#171717 50%) ; */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .exclusive__container {
@@ -416,6 +418,7 @@ button:hover {
 
 .swiper2 {
   position: relative;
+  margin-bottom: 58px;
   padding-top: 50px;
   width: 100%;
   height: 462px;
@@ -460,6 +463,62 @@ button:hover {
 
 .swiper-slide .best__box {
   padding-bottom: 116px;
+}
+
+.exclusive__btn {
+  padding: 11px 47px 21px 47px;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.exclusive__btn:hover {
+  border-color: var(--color-for-dark);
+}
+
+/* design  */
+.design {
+  background-image: url('../images/design_back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.design__container {
+  padding-top: 114px;
+  padding-bottom: 145px;
+}
+
+.design__title {
+  margin-bottom: 9px;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--color-for-dark);
+}
+
+.design__text {
+  margin-bottom: 37px;
+  max-width: 533px;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-for-dark);
+}
+
+.design__btn {
+  padding-top: 20px;
+  padding-bottom: 19px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.design__btn:first-child {
+  margin-right: 15px;
+  padding-left: 52px;
+  padding-right: 61px;
+}
+
+.design__btn:last-child {
+  padding-left: 23px;
+  padding-right: 23px;
 }
 
 /* -------------media---------------- */

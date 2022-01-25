@@ -20,17 +20,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
   });
 
   const swiper1 = new Swiper('.swiper2', {
-    // Optional parameters
-    // direction: 'horizontal',
-    // loop: false,
-    // swiper-slide-active: 2,
+    
     effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
         
         slidesPerView: "auto",
         coverflowEffect: {
-          rotate: 50,
+          rotate: 30,
           scale: 1,
           // stretch: 0,
           depth: 100,
