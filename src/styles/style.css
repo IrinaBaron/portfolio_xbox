@@ -82,7 +82,7 @@ button:hover {
   color: var(--color-for-dark);
   border: 1px solid transparent;
   border-radius: 4px;
-  transition: color .4s ease-in-out, border-color .4s ease-in-out, background-color .4s ease-in-out;
+  transition: color .4s ease-in-out, border-color .4s ease-in-out, background-color .4s ease-in-out, background-image .4s ease-in-out;
 }
 
 .btn__scroll {
@@ -280,12 +280,31 @@ button:hover {
 }
 
 .hero__btn-gray {
-  background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+  position: relative;
+  background-image: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
 }
 
-.hero__btn-gray:hover {
-  background: transparent;
-  border-color: var(--color-background);
+.hero__btn-gray::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid var(--color-background);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: opacity .4s ease-in-out;
+  opacity: 0;
+}
+
+.hero__btn-gray:hover:before {
+  
+  /* border-color: var(--color-background); */
+  opacity: 1;
+
 }
 
 /* best  */
@@ -395,11 +414,22 @@ button:hover {
 
 /* exclusive  */
 .exclusive {
+  position: relative;
+  height: 100%;
   background-image: url('../images/exclusive/exclusive_back.png');
-  /* , radial-gradient(#171717 50%) ; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.exclusive__container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -147px;
+  bottom: 0;
+  left: -146px;
+  background-color: rgba(23, 23, 23, 0.5);
 }
 
 .exclusive__container {
@@ -410,10 +440,12 @@ button:hover {
 }
 
 .exclusive__title {
+  position: relative;
   margin-bottom: 27px;
   font-size: 36px;
   line-height: 42px;
   color: var(--color-for-dark);
+  z-index: 2;
 }
 
 .swiper2 {
@@ -466,6 +498,7 @@ button:hover {
 }
 
 .exclusive__btn {
+  position: relative;
   padding: 11px 47px 21px 47px;
   font-size: 21px;
   line-height: 21px;
@@ -519,6 +552,10 @@ button:hover {
 .design__btn:last-child {
   padding-left: 23px;
   padding-right: 23px;
+}
+
+.design__btn:last-child:hover {
+  color: var(--color-for-dark);
 }
 
 /* -------------media---------------- */
