@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', (e) => {
 
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.myswiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -43,7 +42,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   });
 
+  let drop = document.querySelector('.drop');
+  drop.addEventListener('click', (e) => {
+    // console.log(e.target.classList)
 
+    e.target.classList.toggle('show');
+    e.target.nextElementSibling.classList.toggle('show');
+    // console.log(e.target)
+  })
+
+  document.addEventListener('click', (e) => {
+    console.log(e.target)
+    if(!e.target.closest(['.drop', '.drop__list', 'drop__item'])) {
+      console.log('ok');
+      document.querySelector('.drop').classList.remove('show');
+      document.querySelector('.drop__list').classList.remove('show');
+    }
+  })
 
   // let elems = document.querySelectorAll('.team__item');
   // let names = document.querySelectorAll('.team__wrap');
