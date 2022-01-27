@@ -43,10 +43,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
   });
 
   let dropS = document.querySelectorAll('.drop');
+  function searchShow() {
+    dropS.forEach(drop => {
+      if(drop.classList.contains('show')) {
+        console.log('ok')
+      }
+    })
+  }
   dropS.forEach(drop => {
+    searchShow();
     drop.addEventListener('click', (e) => {
       // console.log(e.target.classList)
-
+      
       e.target.classList.toggle('show');
       e.target.nextElementSibling.classList.toggle('show');
       // console.log(e.target)
