@@ -43,31 +43,38 @@ document.addEventListener('DOMContentLoaded', (e) => {
   });
 
   let dropS = document.querySelectorAll('.drop');
+  let listDrop = document.querySelectorAll('.drop__list');
+
   function searchShow() {
-    dropS.forEach(drop => {
-      if(drop.classList.contains('show')) {
-        console.log('ok')
-      }
-    })
-  }
-  dropS.forEach(drop => {
-    searchShow();
-    drop.addEventListener('click', (e) => {
-      // console.log(e.target.classList)
+    for(let i = 0; i < dropS.length; i++) {
       
+      if(dropS[i].classList.contains('show')) {
+        dropS[i].classList.remove('show');
+        listDrop[i].classList.remove('show');
+      }
+    }
+    // return
+  }
+ 
+  dropS.forEach(drop => {
+    
+    drop.addEventListener('click', (e) => {
+      searchShow();
+      // console.log(e.target)
       e.target.classList.toggle('show');
       e.target.nextElementSibling.classList.toggle('show');
-      // console.log(e.target)
     })
   })
 
 
   document.addEventListener('click', (e) => {
     console.log(e.target)
-    if (!e.target.closest(['.drop', '.drop__list', 'drop__item'])) {
+    if (!e.target.closest(['.drop', '.drop__list', '.drop__item'])) {
       console.log('ok');
-      document.querySelector('.drop').classList.remove('show');
-      document.querySelector('.drop__list').classList.remove('show');
+      // dropS.forEach
+      searchShow();
+      // document.querySelector('.drop').classList.remove('show');
+      // document.querySelector('.drop__list').classList.remove('show');
     }
   })
 
