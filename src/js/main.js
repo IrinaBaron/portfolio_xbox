@@ -19,20 +19,20 @@ document.addEventListener('DOMContentLoaded', (e) => {
   });
 
   const swiper1 = new Swiper('.swiper2', {
-    
+
     effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 30,
-          scale: 1,
-          // stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        },
+    grabCursor: true,
+    centeredSlides: true,
+
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 30,
+      scale: 1,
+      // stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -42,18 +42,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   });
 
-  let drop = document.querySelector('.drop');
-  drop.addEventListener('click', (e) => {
-    // console.log(e.target.classList)
+  let dropS = document.querySelectorAll('.drop');
+  dropS.forEach(drop => {
+    drop.addEventListener('click', (e) => {
+      // console.log(e.target.classList)
 
-    e.target.classList.toggle('show');
-    e.target.nextElementSibling.classList.toggle('show');
-    // console.log(e.target)
+      e.target.classList.toggle('show');
+      e.target.nextElementSibling.classList.toggle('show');
+      // console.log(e.target)
+    })
   })
+
 
   document.addEventListener('click', (e) => {
     console.log(e.target)
-    if(!e.target.closest(['.drop', '.drop__list', 'drop__item'])) {
+    if (!e.target.closest(['.drop', '.drop__list', 'drop__item'])) {
       console.log('ok');
       document.querySelector('.drop').classList.remove('show');
       document.querySelector('.drop__list').classList.remove('show');

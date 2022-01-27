@@ -172,6 +172,10 @@ button:hover {
   display: block;
 }
 
+.drop__item {
+  cursor: pointer;
+}
+
 .drop__item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -184,7 +188,7 @@ button:hover {
   transition: opacity .4s ease-in-out;
 }
 
-.drop__link:hover {
+.drop__item:hover .drop__link {
   opacity: 1;
 }
 
