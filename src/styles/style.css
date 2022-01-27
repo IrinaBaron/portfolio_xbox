@@ -695,6 +695,41 @@ button:hover {
 
 /* -------------media---------------- */
 
+@media (max-width: 1366px) {
+  .swiper {
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .hero__container {
+    height: auto;
+  }
+
+  .one {
+    margin-left: 0;
+  }
+  /* .best__item:not(:last-child) {
+    margin-right: 40px;
+  }  */
+
+  .exclusive__container {
+    padding-top: 79px;
+    padding-bottom: 136px;
+  }
+
+  .exclusive__container::before{
+    right: -127px;
+    left: -127px;
+  }
+  
+  .design__container {
+    padding-top: 104px;
+    padding-bottom: 142px;
+}
+}
 
 @media (max-width: 575px) {
 
