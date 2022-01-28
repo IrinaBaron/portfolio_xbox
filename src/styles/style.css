@@ -720,15 +720,138 @@ button:hover {
     padding-bottom: 136px;
   }
 
+  .exclusive__container {
+    padding-top: 55px;
+    padding-bottom: 139px;
+  }
+
   .exclusive__container::before{
     right: -127px;
     left: -127px;
   }
+
+  .exclusive__container::before {
+    right: -7%;
+    left: -7%;
+  }
   
   .design__container {
-    padding-top: 104px;
+    padding-top: 97px;
     padding-bottom: 142px;
+  }
 }
+
+@media (max-width: 1224px) {
+
+  .exclusive__container {
+    padding-top: 55px;
+    padding-bottom: 73px;
+  }
+
+  .exclusive__container::before {
+    right: -5%;
+    left: -5%;
+  }
+
+  .design__container {
+    padding-top: 96px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__container {
+    padding-top: 160px;
+  } 
+
+  .swiper-slide {
+    background-size: cover;
+  }
+
+  .best__item {
+    width: auto;
+    max-width: 314px;
+    flex-grow: unset;
+  }
+
+  .best__item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .best__box {
+    padding-right: 16px;
+    padding-left: 15px;
+  } 
+
+  .best__wrap {
+    margin-left: -14px;
+    width: calc(100% + 28px);
+  }
+
+  .one {
+    margin-left: 0;
+    margin-top: -2px;
+    width: 312px;
+  }
+
+  .best__btn {
+    margin-right: 0;
+  }
+
+  .exclusive {
+    background-size: cover;
+  }
+
+  .exclusive__container::before {
+    right: 0%;
+  }
+
+  .swiper2 {
+    margin-bottom: 38px;
+  }
+
+  .exclusive__container .swiper-button-prev {
+    top: 20%;
+    left: 13%;
+  }
+
+  .exclusive__container .swiper-button-next {
+    top: 20%;
+    right: 12%;
+  } 
+
+  .swiper-slide .best__wrap {
+    margin-left: -15px;
+    padding-top: 1px;
+    width: calc(100% + 31px);
+    height: 160px;
+  }
+
+  .best__desc {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-text);
+  }
+
+  .design {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .best__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .best__item {
+    width: 100%;
+  }
+
+  .best__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 575px) {
