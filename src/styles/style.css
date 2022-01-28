@@ -1112,7 +1112,7 @@ button:hover {
   
   .exclusive__title {
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 27px;
     line-height: 36px;
   }
 
@@ -1125,10 +1125,8 @@ button:hover {
     width: auto;
   }
 
-  .design__btn:first-child {
-    margin-right: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .design__title {
+    font-size: 42px;
   }
 
   .design__btn {
@@ -1138,6 +1136,13 @@ button:hover {
     line-height: 16px;
   }
 
+  .design__btn:first-child {
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
   .design__btn:last-child {
     margin-right: 0;
     padding-left: 15px;
@@ -1146,8 +1151,54 @@ button:hover {
   }
 }
 
-/* @media (max-width: 320px) {
-  .swiper-slide__wrap {
-    width: 90%;
+@media (max-width: 320px) {
+  .one {
+    margin-left: 0;
+    margin-top: -16px;
+    width: 288px;
   }
-} */
+
+  .best__container {
+    padding-bottom: 50px;
+  }
+
+  .best__btn {
+    padding: 7px 17px;
+  }
+
+  .swiper-slide .best__wrap {
+    margin-bottom: 10px;
+    padding-top: 16px;
+    height: auto;
+  }
+
+  .swiper2 .swiper-slide {
+    width: 99%;
+  }
+
+  .design__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 20px;
+  } 
+
+  .footer__link {
+    font-size: 12px;
+  }
+
+  .social .footer__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .footer__span {
+    font-size: 14px;
+  }
+}

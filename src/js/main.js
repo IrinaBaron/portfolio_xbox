@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   });
 
+  // -----------------------drop-menu--------------------
+
   let dropS = document.querySelectorAll('.drop');
   let listDrop = document.querySelectorAll('.drop__list');
 
@@ -55,28 +57,48 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     // return
   }
- 
-  dropS.forEach(drop => {
-    
-    drop.addEventListener('click', (e) => {
-      searchShow();
-      // console.log(e.target)
-      e.target.classList.toggle('show');
-      e.target.nextElementSibling.classList.toggle('show');
-    })
-  })
-
 
   document.addEventListener('click', (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     if (!e.target.closest(['.drop', '.drop__list', '.drop__item'])) {
       console.log('ok');
       // dropS.forEach
       searchShow();
-      // document.querySelector('.drop').classList.remove('show');
-      // document.querySelector('.drop__list').classList.remove('show');
     }
+
+    // if(e.target.closest('.show')) {
+    //   console.log('show')
+    //   document.querySelector('.drop').classList.remove('show');
+    //   document.querySelector('.drop__list').classList.remove('show');
+    // }
   })
+ 
+  dropS.forEach(drop => {
+    
+    drop.addEventListener('click', (e) => {
+      
+      // if(e.target.closest('.show')){
+      //   console.log(e.target)
+      //   e.target.classList.remove('show');
+      //   e.target.nextElementSibling.classList.remove('show');
+      // }
+
+      if(!e.target.closest('.show')) {
+        console.log('show')
+        console.log(e.target)
+        searchShow();
+        e.target.classList.toggle('show');
+        e.target.nextElementSibling.classList.toggle('show');
+        
+      } 
+      
+     
+      
+    })
+    return
+  })
+
+
 
   // let elems = document.querySelectorAll('.team__item');
   // let names = document.querySelectorAll('.team__wrap');
