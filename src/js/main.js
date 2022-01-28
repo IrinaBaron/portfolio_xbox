@@ -121,10 +121,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   // // -----------burger-------------
 
-  // document.querySelector('.hero-burger').addEventListener('click', () => {
-  //   document.querySelector('.hero-burger').classList.toggle('active');
-  //   document.querySelector('.hero__nav').classList.toggle('active');
-  // })
+  document.querySelector('.header-burger').addEventListener('click', () => {
+    document.querySelector('.header__item').classList.remove('active');
+    document.body.classList.toggle('stop-scrolling');
+    document.querySelector('.header-burger').classList.toggle('active');
+    document.querySelector('.header__nav').classList.toggle('active');
+  })
 
   // ------------scroll--------------
   const btnScroll = document.querySelector('.btn__scroll');
