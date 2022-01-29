@@ -696,6 +696,155 @@ button:hover {
 }
 
 
+
+/* -----------------page2----------------- */
+
+/* hero2  */
+
+.hero2 {
+  height: 100%;
+  background-image: url('../images/call_of_duty/CoD-WWII.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero2-container {
+  padding-top: 106px;
+  padding-bottom: 204px;
+}
+
+.hero2__subtitle {
+  display: inline-block;
+  margin-bottom: 139px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-for-dark);
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* about */
+.about {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(95, 98, 101, 0.1) 100%);
+}
+
+.about__container {
+  padding-top: 99px;
+  padding-bottom: 109px;
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 208px;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--color-text);
+}
+
+.about__wrap {
+  margin-bottom: 103px;
+}
+
+.about__btn {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.about__btn:first-child {
+  margin-right: 14px;
+  padding: 13px 41px 18px 41px;
+}
+
+.about__btn:last-child {
+  padding: 13px 20px 18px 21px;
+}
+
+.about__img {
+  margin-bottom: 98px;
+  max-width: 890px;
+  width: 100%;
+  max-height: 562px;
+  height: 100%;
+  border-radius: 11px;
+}
+
+.about__item {
+  display: flex;
+  flex-shrink: 50%;
+}
+
+.about__list {
+  margin-bottom: 105px;
+}
+
+.about__item:first-child {
+  margin-bottom: 97px;
+}
+
+.about__box {
+  padding-top: 20px;
+  width: 50%;
+}
+
+.about__subtitle {
+  max-width: 400px;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--color-text);
+}
+
+.about__img-list {
+  max-width: 524px;
+  width: 100%;
+  max-height: 359px;
+  height: 100%;
+}
+
+.technical .about__title {
+  margin-bottom: 47px;
+}
+
+.technical__list {
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technical__item {
+  flex-basis: 317px;
+  text-align: left;
+}
+
+.technical__item:not(:nth-child(3n)) {
+  margin-right: 64px;
+}
+
+.technical__item:first-child {
+  margin-bottom: 20px;
+}
+
+.technical__text {
+  font-size: 21px;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+.technical .about__wrap {
+  margin-bottom: 0;
+}
+
+.about__wrap .hero__btn-gray {
+  margin-right: 16px;
+  padding: 13px 53px 18px 53px;
+}
+
+.about__wrap .hero__btn-green {
+  padding: 13px 19px 18px 18px;
+}
+
+
+
+
 /* -------------media---------------- */
 
 @media (max-width: 1366px) {
