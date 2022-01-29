@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', (e) => {
 
-
   const swiper = new Swiper('.myswiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       prevEl: '.swiper-button-prev',
     },
 
-
   });
 
   // -----------------------drop-menu--------------------
@@ -48,98 +46,36 @@ document.addEventListener('DOMContentLoaded', (e) => {
   let listDrop = document.querySelectorAll('.drop__list');
 
   function searchShow() {
-    for(let i = 0; i < dropS.length; i++) {
-      
-      if(dropS[i].classList.contains('show')) {
+    for (let i = 0; i < dropS.length; i++) {
+
+      if (dropS[i].classList.contains('show')) {
         dropS[i].classList.remove('show');
         listDrop[i].classList.remove('show');
       }
     }
-    // return
+ 
   }
 
   document.addEventListener('click', (e) => {
-    // console.log(e.target)
     if (!e.target.closest(['.drop', '.drop__list', '.drop__item'])) {
-      console.log('ok');
-      // dropS.forEach
       searchShow();
     }
-
-    // if(e.target.closest('.show')) {
-    //   console.log('show')
-    //   document.querySelector('.drop').classList.remove('show');
-    //   document.querySelector('.drop__list').classList.remove('show');
-    // }
   })
- 
-  dropS.forEach(drop => {
-    
-    drop.addEventListener('click', (e) => {
-      
-      // if(e.target.closest('.show')){
-      //   console.log(e.target)
-      //   e.target.classList.remove('show');
-      //   e.target.nextElementSibling.classList.remove('show');
-      // }
 
-      if(!e.target.closest('.show')) {
-        console.log('show')
-        console.log(e.target)
+  dropS.forEach(drop => {
+
+    drop.addEventListener('click', (e) => {
+      if (e.target.closest('.show')) {
+        e.target.classList.remove('show');
+        e.target.nextElementSibling.classList.remove('show');
+      } else {
         searchShow();
         e.target.classList.toggle('show');
-        e.target.nextElementSibling.classList.toggle('show');
-        
-      } 
-      
-     
-      
+        e.target.nextElementSibling.classList.toggle('show'); 
+      }
     })
     return
   })
-
-
-
-  // let elems = document.querySelectorAll('.team__item');
-  // let names = document.querySelectorAll('.team__wrap');
-
-  // elems.forEach(elem => {
-  //   elem.addEventListener('click', (e) => {
-  //     elem.classList.toggle('active');
-
-  //   })
-  // })
-
-  // document.addEventListener('click', (e) => {
-  //   // console.log(e.target)
-  //   if (!e.target.matches('.team__img')) {
-  //     elems.forEach(elem => {
-  //       elem.classList.remove('active');
-  //     })
-  //   }
-
-  //   if (e.target.closest('.team__name')) {
-  //     let parent = e.target.parentElement;
-  //     parent.parentElement.classList.toggle('active')
-  //   }
-
-  //   if (!e.target.closest('.contacts')) {
-  //     document.querySelector('.contacts__more').classList.remove('show')
-  //   }
-
-  // })
-
-  // document.addEventListener('dblclick', (e) => {
-  //   if (e.target.closest('.contacts__list')) {
-  //     document.querySelector('.contacts__more').classList.remove('show')
-  //   }
-  // })
-
-
-  // document.querySelector('.contacts__btn').addEventListener('click', (e) => {
-  //   e.preventDefault();
-  //   document.querySelector('.contacts__more').classList.toggle('show')
-  // })
 
   // // -----------burger-------------
 
