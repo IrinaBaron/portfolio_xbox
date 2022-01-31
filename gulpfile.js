@@ -1,11 +1,6 @@
 'use strict';
-// import { src, dest, series, watch, parallel } from 'gulp';
-// function defaultTask(cb) {
-//   // place code for your default task here
-//   cb();
-// }
 
-// export default defaultTask
+
 import gulp from 'gulp';
 const { series, parallel } = pkg;
 import pkg from 'gulp';
@@ -137,8 +132,6 @@ const buildM = async function () {
     .pipe(dest('dist/images'))
   const fnt = src(['src/fonts/**/*.woff', 'src/fonts/**/*.woff2'])
     .pipe(dest('dist/fonts'))
-  // return src(['src/fonts/**/*.woff'])
-  // .pipe(dest('dist/fonts'))
 }
 
 

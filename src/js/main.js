@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     },
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.exclusive .swiper-button-next',
+      prevEl: '.exclusive .swiper-button-prev',
     },
 
   });
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
   const btnScroll = document.querySelector('.btn__scroll');
   window.addEventListener('scroll', () => {
     let scrollNum = window.pageYOffset;
-    console.log(scrollNum);
 
     if (scrollNum >= '100') {
       btnScroll.style.display = 'block';
