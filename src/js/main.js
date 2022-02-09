@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     loop: false,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.hero__container_wrap .swiper-button-next',
+      prevEl: '.hero__container_wrap .swiper-button-prev',
     },
 
     pagination: {
